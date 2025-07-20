@@ -3,7 +3,7 @@
 **Project:** Cooling-Link Controller \
 **Platform:** ESP32 (Heltec LoRa version) \
 **Environment:** ESP-IDF (ESP32 development framework) \
-**Project type:** Final Degree Project (Brazilian TCC — Trabalho de Conclusão de Curso) \
+**Project type:** Final Degree Project (aka in Brazil as TCC — Trabalho de Conclusão de Curso) \
 
 ---
 
@@ -18,7 +18,7 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 ## Main Features
 
 * **Real-time environmental monitoring**
-  Measures internal and external temperature, humidity, and CO₂ using sensors like HTU31D.
+  Measures internal (temperature, humidity, and CO₂) and external (temperature and humidity) using sensors like HTU31D.
 
 * **User interaction**
   Local adjustment of sensor thresholds (min/max) through physical buttons (ADD, SUB, ENTER) with debounce handling, short/long press detection, and an OLED display for feedback.
