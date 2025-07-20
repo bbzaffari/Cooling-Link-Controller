@@ -25,7 +25,7 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 
 * **Communication protocols**
 
-  * LoRa: Local radio communication between distributed nodes.
+  * LoRa: Long Range communication between distributed nodes.
   * MQTT over Wi-Fi: Remote telemetry to brokers for supervision and control.
 
 * **Concurrency and flow control**
