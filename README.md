@@ -36,4 +36,4 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 
 ---
 
-#In the future, I plan to provide a more detailed explanation of this project, including deeper insights into its architecture, implementation challenges, and potential applications.
+#In the near future, I plan to provide a more detailed explanation of this project, including deeper insights into its architecture, implementation challenges, and potential applications.
