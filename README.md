@@ -34,6 +34,128 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 * **Custom utilities and wrappers**
   Includes custom-made utility libraries (e.g., `Utils`) for logging, I²C handling, and structured hardware abstraction.
 
+
 ---
 
-#In the near future, I plan to provide a more detailed explanation of this project, including deeper insights into its architecture, implementation challenges, and potential applications.
+## Code Structure
+
+This module defines the **core data structures** for configuring and managing sensor parameters (like TEMP, HUM, CO₂) in a clean and scalable way.
+- ***`sConfigActivation`***
+- ***`sConfigElement`***
+
+```c
+typedef struct {//--- configs[]
+    const char* name;                // Sensor group name (e.g., "TEMP")
+    sConfigElement elements[4];      // Parameters to configure (e.g., MAX, MIN, relays)
+    uint32_t repeat;                // Delay (ms) between auto-increments during long press
+    uint8_t elements_count;         // Number of valid elements in the array
+} sConfigActivation;
+
+typedef struct {//-- ConfigElements
+    const char* name;     // Human-readable label (e.g., "MAX", "RELAY MIN")
+    float value;          // Current value of this element (modifiable)
+    float* MAX;           // Optional upper bound (enforced at runtime)
+    float* MIN;           // Optional lower bound
+    float pacing;         // Step used when adjusting via physical buttons
+} sConfigElement;
+
+```
+### Sensor:
+
+Each entry in ***`configs`*** corresponds to a sensor, such as:\
+***`TEMP`*** for temperature \
+***`HUM`*** for humidity \
+***`CO2`*** for carbon dioxide concentration 
+
+```c
+// === Structural Comp. =============================================----------
+static sConfigActivation configs[SENSORS_COUNT] = {
+    {
+        .name = "TEMP",
+        .elements = { ... },
+        .repeat = ...,
+        .elements_count = ...
+    },
+    {
+        .name = "HUM",
+        .elements = { ... },
+        .repeat = ...,
+        .elements_count = ...
+    },
+    {
+        .name = "CO2",
+        .elements = { ... },
+        .repeat = ...,
+        .elements_count = ...
+    }
+};
+```
+
+### Inside each sensor:
+
+We define four elements:\
+**MAX**: maximum threshold (e.g., TEMP MAX)\
+**RELAY MAX**: A relay control flag for the max limit\
+**MIN**: A minimum threshold\
+**RELAY MIN**: A relay control flag for the min limit
+
+Each element is defined using:
+
+```c
+{ "NAME", value, pointer_to_MAX, pointer_to_MIN, pacing_step }
+````
+
+### Why this Matters:
+1. MAX/MIN entries define when alerts or actions (like ventilation or dehumidifiers) should trigger. 
+2. RELAY MAX/MIN act as switches — enabling or disabling control actions when those thresholds are crossed.
+3. Pacing defines how finely the user can adjust the value (e.g., +0.5°C, +50 ppm).
+4. The system traverses these elements when the user enters "configuration mode", using buttons for ADD/SUB and ENTER.
+
+### Data-Driven Design
+Instead of hardcoding logic for each sensor and each variable, this array allows the control logic to be generalized.
+
+> The configuration FSM (tConfig) knows only how to:
+> 1. Select one sConfigElement at a time
+> 2. Modify its .value using pacing
+> 3. Save it after user confirmation
+> 4. Use its .MAX and .MIN pointers to enforce safe bounds
+> 5. This abstraction enables:
+> 6. Code reusability
+> 7. Safe configuration
+> 8. Dynamic display
+> 9. External interface expansion (e.g., MQTT-driven updates)
+
+## Example: TEMP
+
+```c
+// === Structural Comp. =============================================----------
+static sConfigActivation configs[SENSORS_COUNT] = {
+    {
+        .name = "TEMP",
+        .elements = {
+            // NAME:| value         |MAX            | MIN| pacing|
+            { "MAX", MAX_LIMIT_TEMP, &MAX_LIMIT_TEMP, NULL, 0.5f },
+            { "RELAY MAX", 0, &ONE, &ZERO, 1},
+            { "MIN", MIN_LIMIT_TEMP, NULL, &MIN_LIMIT_TEMP, 0.5f },
+            { "RELAY MIN", 0, &ONE, &ZERO, 1}
+        },
+        .repeat = REPEAT_MS_TEMP,
+        .elements_count = 4
+    },
+    { ... },
+    { ... }
+};
+```
+
+This tells the system:
+- The temperature MAX limit starts at 80°C and cannot go above that
+- The MIN limit is 2°C and cannot go below that
+- Relay activation is enabled/disabled via binary flags (RELAY)
+- Values are adjusted in 0.5°C increments using the physical interface
+
+## Expandability
+To add a new sensor (e.g., light sensor, ammonia detector):
+
+Just append it to configs[], and the system handles it automatically — from FSM traversal to OLED rendering.
+
+---
