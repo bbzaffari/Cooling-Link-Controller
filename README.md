@@ -1,6 +1,6 @@
 # Cooling-Link Controller
 
-**Status:** [![status: stable | refactoring in progress](https://img.shields.io/badge/status-stable%20%7C%20refactoring%20in%20progress-green.svg)](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY)
+**Status:** [![status: stable | refactoring in progress](https://img.shields.io/badge/status-stable%20%7C%20refactoring%20in%20progress-green.svg)](https://github.com/bbzaffari/Cooling-Link-Controller)
 
 
 **Project:** Cooling-Link Controller \
@@ -21,14 +21,14 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 ## Main Features
 
 * **Real-time environmental monitoring**
-  Measures internal (temperature, humidity, and CO₂) and external (temperature and humidity) using sensors like HTU31D.
+Receives internal (temperature, humidity, and CO₂), througha protocol developed on top LoRa(phy), and external (temperature and humidity) using sensors like HTU31D.
 
 * **User interaction**
   Local adjustment of sensor thresholds (min/max) through physical buttons (ADD, SUB, ENTER) with debounce handling, short/long press detection, and an OLED display for feedback.
 
 * **Communication protocols**
 
-  * LoRa: Long Range communication between distributed nodes.
+  * LoRa - proto: Protocol developed on top LoRa(phy).
   * MQTT over Wi-Fi: Remote telemetry to brokers for supervision and control.
 
 * **Concurrency and flow control**
@@ -36,7 +36,6 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 
 * **Custom utilities and wrappers**
   Includes custom-made utility libraries (e.g., `Utils`) for logging, I²C handling, and structured hardware abstraction.
-
 
 ---
 
