@@ -95,11 +95,11 @@ static sConfigActivation configs[SENSORS_COUNT] = {
 
 ### Inside each sensor:
 
-We define four elements:\
-**MAX**: maximum threshold (e.g., TEMP MAX)\
-**RELAY MAX**: A relay control flag for the max limit\
-**MIN**: A minimum threshold\
-**RELAY MIN**: A relay control flag for the min limit
+We define four elements:
+1. **MAX**: maximum threshold
+2. **RELAY MAX**: A relay control flag for the max limit
+3. **MIN**: A minimum threshold
+4. **RELAY MIN**: A relay control flag for the min limit
 
 Each element is defined using:
 
