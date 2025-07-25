@@ -125,7 +125,7 @@ Instead of hardcoding logic for each sensor and each variable, this array allows
 > 1. Select one sConfigElement at a time
 > 2. Modify its .value using pacing
 > 3. Save it after user confirmation
-> 4. Use its MAX and MIN *pointers* to enforce safe bounds
+> 4. Use its MAX and MIN *pointers* to enforce safe bounds\
 > This abstraction enables:
 > 1. Code reusability
 > 2. Safe configuration
