@@ -157,7 +157,7 @@ static sConfigActivation configs[SENSORS_COUNT] = {
 This tells the system:
 - The temperature MAX limit starts at 80°C and cannot go above that
 - The MIN limit is 2°C and cannot go below that
-- Relay activation is enabled/disabled via binary flags (RELAY)
+- Relay activation is enabled/disabled via binary flags (RELAY {MAX, MIN})
 - Values are adjusted in 0.5°C increments using the physical interface
 
 ## Expandability
