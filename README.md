@@ -21,14 +21,14 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 ## Main Features
 
 * **Real-time environmental monitoring**
-Receives internal (temperature, humidity, and CO2), through a `LoRa—Proto`, and external (temperature and humidity) using sensors like HTU31D.
+Receives internal (temperature, humidity, and CO2), through a `LoRa–Proto`, and external (temperature and humidity) using sensors like HTU31D.
 
 * **User interaction**
   Local adjustment of sensor thresholds (min/max) through physical buttons (ADD, SUB, ENTER) with debounce handling, short/long press detection, and an OLED display for feedback.
 
 * **Communication protocols**
 
-  * LoRa—Proto: Protocol developed on top of LoRa(PHY).
+  * LoRa–Proto: Protocol developed on top of LoRa(PHY).
   * MQTT over Wi-Fi: Remote telemetry to brokers for supervision and control.
 
 * **Concurrency and flow control**
@@ -64,10 +64,10 @@ typedef struct {//-- ConfigElements
 ```
 ### Sensor:
 
-Each entry in ***`configs`*** corresponds to a sensor, such as:\
-***`TEMP`*** for temperature \
-***`HUM`*** for humidity \
-***`CO2`*** for carbon dioxide concentration 
+Each entry in ***`configs`*** corresponds to a sensor, such as:
+- ***`TEMP`*** for temperature 
+- ***`HUM`*** for humidity 
+- ***`CO2`*** for carbon dioxide concentration 
 
 ```c
 // === Structural Comp. =============================================----------
