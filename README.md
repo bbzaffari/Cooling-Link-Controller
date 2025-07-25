@@ -125,12 +125,12 @@ Instead of hardcoding logic for each sensor and each variable, this array allows
 > 1. Select one sConfigElement at a time
 > 2. Modify its .value using pacing
 > 3. Save it after user confirmation
-> 4. Use its .MAX and MIN *pointers* to enforce safe bounds
-> 5. This abstraction enables:
-> 6. Code reusability
-> 7. Safe configuration
-> 8. Dynamic display
-> 9. External interface expansion (e.g., MQTT-driven updates)
+> 4. Use its MAX and MIN *pointers* to enforce safe bounds
+> This abstraction enables:
+> 1. Code reusability
+> 2. Safe configuration
+> 3. Dynamic display
+> 4. External interface expansion (e.g., MQTT-driven updates)
 
 ## Example: TEMP
 
