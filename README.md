@@ -118,14 +118,15 @@ Each element is defined using:
 3. Pacing defines how finely the user can adjust the value (e.g., +0.5°C, +50 ppm).
 4. The system traverses these elements when the user enters "configuration mode", using buttons for ADD/SUB and ENTER.
 
-### Data-Driven Design
-Instead of hardcoding logic for each sensor and each variable, this array allows the control logic to be generalized.
-
 > The configuration FSM (tConfig) knows only how to:
 > 1. Select one sConfigElement at a time
-> 2. Modify its .value using pacing
+> 2. Modify its .value using .pacing
 > 3. Save it after user confirmation
-> 4. Use its MAX and MIN *pointers* to enforce safe bounds\
+> 4. Use its .MAX and .MIN *pointers* to enforce safe bounds
+
+### Data-Driven Design
+Instead of hardcoding logic for each sensor and each variable, this array allows the control logic to be generalized.
+  
 > This abstraction enables:
 > 1. Code reusability
 > 2. Safe configuration
