@@ -113,7 +113,7 @@ Each element is defined using:
 ````
 
 ### Why this Matters:
-1.`"MAX"`/`"MIN"` entries define when alerts or actions (like ventilation or dehumidifiers) should trigger. 
+1. `"MAX"`/`"MIN"` entries define when alerts or actions (like ventilation or dehumidifiers) should trigger. 
 2. `"RELAY {MAX, MIN}"` act as switches — enabling or disabling control actions when those thresholds are crossed.
 3. Pacing defines how finely the user can adjust the value (e.g., +0.5°C, +50 ppm).
 4. The system traverses these elements when the user enters "configuration mode", using buttons for ADD/SUB and ENTER.
