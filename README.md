@@ -12,7 +12,7 @@
 
 ## Overview
 
-Cooling-Link Controller is the core embedded system designed for my final engineering project (TCC). It is a cold storage chamber controller that integrates real-time monitoring, control, and remote communication for temperature, humidity, and CO₂ levels.
+Cooling-Link Controller is the core embedded system designed for my final engineering project (TCC). It is a cold storage chamber controller that integrates real-time monitoring, control, and remote communication for temperature, humidity, and CO levels.
 
 This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development environment. It was built to explore fine-grained task and thread management using FreeRTOS, with careful use of semaphores, mutexes, and hardware interrupts to optimize interface flow and system responsiveness.
 
@@ -21,27 +21,27 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 ## Main Features
 
 * **Real-time environmental monitoring**
-Receives internal (temperature, humidity, and CO₂), througha protocol developed on top LoRa(phy), and external (temperature and humidity) using sensors like HTU31D.
+Receives internal (temperature, humidity, and CO2), through a `LoRa—Proto`, and external (temperature and humidity) using sensors like HTU31D.
 
 * **User interaction**
   Local adjustment of sensor thresholds (min/max) through physical buttons (ADD, SUB, ENTER) with debounce handling, short/long press detection, and an OLED display for feedback.
 
 * **Communication protocols**
 
-  * LoRa - proto: Protocol developed on top LoRa(phy).
+  * LoRa—Proto: Protocol developed on top of LoRa(PHY).
   * MQTT over Wi-Fi: Remote telemetry to brokers for supervision and control.
 
 * **Concurrency and flow control**
   FreeRTOS tasks, semaphores, and interrupts ensure robust, responsive operations even under concurrent events (e.g., button presses, sensor updates, communication).
 
 * **Custom utilities and wrappers**
-  Includes custom-made utility libraries (e.g., `Utils`) for logging, I²C handling, and structured hardware abstraction.
+  Includes custom-made utility libraries (e.g., `Utils`) for logging, I2C handling, and structured hardware abstraction.
 
 ---
 
 ## Code Structure
 
-This module defines the **core data structures** for configuring and managing sensor parameters (like TEMP, HUM, CO₂) in a clean and scalable way.
+This module defines the **core data structures** for configuring and managing sensor parameters (like TEMP, HUM, CO2) in a clean and scalable way.
 - ***`sConfigActivation`***
 - ***`sConfigElement`***
 
