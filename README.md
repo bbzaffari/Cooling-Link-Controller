@@ -65,7 +65,7 @@ typedef struct {//-- ConfigElements
 ### Sensor:
 
 Each entry in ***`configs`*** corresponds to a sensor, such as:
--***`TEMP`*** for temperature 
+- ***`TEMP`*** for temperature 
 - ***`HUM`*** for humidity 
 - ***`CO2`*** for carbon dioxide concentration 
 
