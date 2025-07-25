@@ -105,7 +105,7 @@ Each element is defined using:
 
 ```c
 .elements = {
-            // NAME:| value         |*MAX          | *MIN| pacing|
+            // NAME:| value        |MAX pointer |MIN pointer| pacing|
             { "MAX", MAX_LIMIT_TEMP, &MAX_LIMIT_TEMP, NULL, 0.5f },
             { "RELAY MAX", 0, &ONE, &ZERO, 1},
             { "MIN", MIN_LIMIT_TEMP, NULL, &MIN_LIMIT_TEMP, 0.5f },
@@ -113,8 +113,8 @@ Each element is defined using:
 ````
 
 ### Why this Matters:
-1. *MAX/*MIN entries define when alerts or actions (like ventilation or dehumidifiers) should trigger. 
-2. RELAY MAX/MIN act as switches — enabling or disabling control actions when those thresholds are crossed.
+1.`"MAX"`/`"MIN"` entries define when alerts or actions (like ventilation or dehumidifiers) should trigger. 
+2. `"RELAY {MAX, MIN}"` act as switches — enabling or disabling control actions when those thresholds are crossed.
 3. Pacing defines how finely the user can adjust the value (e.g., +0.5°C, +50 ppm).
 4. The system traverses these elements when the user enters "configuration mode", using buttons for ADD/SUB and ENTER.
 
@@ -125,7 +125,7 @@ Instead of hardcoding logic for each sensor and each variable, this array allows
 > 1. Select one sConfigElement at a time
 > 2. Modify its .value using pacing
 > 3. Save it after user confirmation
-> 4. Use its .MAX and .MIN pointers to enforce safe bounds
+> 4. Use its .MAX and MIN *pointers* to enforce safe bounds
 > 5. This abstraction enables:
 > 6. Code reusability
 > 7. Safe configuration
