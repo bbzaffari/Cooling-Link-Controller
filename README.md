@@ -6,7 +6,7 @@
 **Project:** Cooling-Link Controller \
 **Platform:** ESP32 (Heltec LoRa version) \
 **Environment:** ESP-IDF (ESP32 development framework) \
-**Project type:** Final Project Thesis(TCC – Trabalho de Conclusão de Curso, in Brazil)
+**Project type:** [Final Project Thesis](https://github.com/bbzaffari/TCC-Final-Project-Thesis)(TCC – Trabalho de Conclusão de Curso, in Brazil)
 
 ---
 
