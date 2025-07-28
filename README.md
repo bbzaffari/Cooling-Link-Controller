@@ -6,7 +6,7 @@
 **Project:** Cooling-Link Controller \
 **Platform:** ESP32 (Heltec LoRa version) \
 **Environment:** ESP-IDF (ESP32 development framework) \
-**Project type:** [Final Project Thesis](https://github.com/bbzaffari/TCC-Final-Project-Thesis)(TCC – Trabalho de Conclusão de Curso, in Brazil)
+**Project type:** [Final Project Thesis(TCC – Trabalho de Conclusão de Curso, in Brazil)](https://github.com/bbzaffari/TCC-Final-Project-Thesis)
 
 ---
 
@@ -39,7 +39,7 @@ Receives internal (temperature, humidity, and CO2), through a `LoRa–Proto`, an
 
 ---
 
-## Code Structure
+## Core Structure
 
 This module defines the **core data structures** for configuring and managing sensor parameters (like TEMP, HUM, CO2) in a clean and scalable way.
 - ***`sConfigActivation`***
