@@ -19,7 +19,7 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 ​ 
 ---
 - [Main Features](#main-features)
-- [Core Structure](#core-structure)
+- [Core Structure](#Core-Control-Structures)
 - [Repository Structure](#repository-structure)
 
 ---
