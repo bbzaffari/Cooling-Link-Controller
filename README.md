@@ -178,12 +178,12 @@ Below is an overview of the key folders and components in this project:
     - [`ssd1306`](https://github.com/bbzaffari/esp-idf-ssd1306-Minimal-Version) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// SSD1306 OLED driver (adapted from nopnop2002)
   - `main/`
     - `main.c` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Entry point: system control loop, tasks and config
-    - `Utils.c/.h` &nbsp; // Utility functions (Wrappers, common tools)
+    - `Utils.c/.h` // Utility functions (Wrappers, common tools)
     - `CMakeLists.txt`
   - `.gitmodules` &nbsp;&nbsp;&nbsp;&nbsp; // Git submodules configuration  
   - `README.md`  
   - `sdkconfig` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // ESP-IDF config file  
-  - `CMakeLists.txt` &nbsp;// Project build definition
+  - `CMakeLists.txt` // Project build definition
 
 ## Clone
 All the modules listed above are required for proper system operation, as they implement core sensor drivers, communication protocols, and peripheral interfaces. To clone the complete functional project with all its dependencies, including submodules, use the following command:
