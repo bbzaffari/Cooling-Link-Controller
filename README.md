@@ -25,10 +25,10 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
 ## Main Features
 
 * **Real-time environmental monitoring**
-Receives internal (temperature, humidity, and CO2), through a [`LoRa–Proto`](https://github.com/bbzaffari/LoRa-Protocol-ESP-IDF), and external (temperature and humidity) using sensors like [`HTU31D`](https://github.com/bbzaffari/HTU-31D-ESP-IDF-C).
+  * Receives internal (temperature, humidity, and CO2), through a [`LoRa–Proto`](https://github.com/bbzaffari/LoRa-Protocol-ESP-IDF), and external (temperature and humidity) using sensors like [`HTU31D`](https://github.com/bbzaffari/HTU-31D-ESP-IDF-C).
 
 * **User interaction**
-  Local adjustment of sensor thresholds (min/max) through physical buttons (ADD, SUB, ENTER) with debounce handling, short/long press detection, and an OLED display for feedback.
+  * Local adjustment of sensor thresholds (min/max) through physical buttons (ADD, SUB, ENTER) with debounce handling, short/long press detection, and an OLED display for feedback.
 
 * **Communication protocols**
 
