@@ -165,6 +165,9 @@ This tells the system:
 - The MIN limit is 2°C and cannot go below that
 - Relay activation is enabled/disabled via binary flags (RELAY {MAX, MIN})
 - Values are adjusted in 0.5°C increments using the physical interface
+  
+---
+---
 
 ## Repository Structure
 
@@ -184,6 +187,8 @@ Below is an overview of the key folders and components in this project:
   - `README.md`  
   - `sdkconfig` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**->** *ESP-IDF config fil  
   - `CMakeLists.txt`**->** *Project build definition*
+
+---
 
 ## Clone
 All the modules listed above are required for proper system operation, as they implement core sensor drivers, communication protocols, and peripheral interfaces. To clone the complete functional project with all its dependencies, including submodules, use the following command:
