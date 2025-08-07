@@ -44,7 +44,7 @@ Receives internal (temperature, humidity, and CO2), through a `LoRa–Proto`, an
 
 ---
 
-## Core Structure
+## Core Control Structures
 
 This module defines the **core data structures** for configuring and managing sensor parameters (like TEMP, HUM, CO2) in a clean and scalable way.
 - ***`sConfigActivation`***
@@ -67,7 +67,7 @@ typedef struct {//-- ConfigElements
 } sConfigElement;
 
 ```
-### Sensor:
+### Sensor Control:
 
 Each entry in ***`configs`*** corresponds to a sensor, such as:
 - ***`TEMP`*** for temperature 
@@ -98,7 +98,7 @@ static sConfigActivation configs[SENSORS_COUNT] = {
 };
 ```
 
-### Inside each sensor:
+### Inside each sensor control:
 
 We define four elements:
 1. **MAX**: maximum threshold
