@@ -168,7 +168,7 @@ This tells the system:
 
 ## Repository Structure
 Below is an overview of the key folders and components in this project:
-``` c
+``` 
 Cooling-Link-Controller/ 
 ├── components/ 
 ├─── [`htu31`](https://github.com/bbzaffari/HTU-31D-ESP-IDF-C)/          // HTU31D sensor driver (fully implemented for ESP-IDF) 
