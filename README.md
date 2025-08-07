@@ -11,7 +11,7 @@
 
 ## Overview
 
-Cooling-Link Controller is the core embedded system designed for my final engineering project (TCC). It is a cold storage chamber controller that integrates real-time monitoring, control, and remote communication for temperature, humidity, and CO2 levels. **Core Files:** [main/](main)
+Cooling-Link Controller is the core embedded system designed for my final engineering project thesis (TCC). It is a cold storage chamber controller that integrates real-time monitoring, control, and remote communication for temperature, humidity, and CO2 levels. **Core Files:** [main/](main)
 
 This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development environment. It was built to explore fine-grained task and thread management using FreeRTOS, with careful use of semaphores, mutexes, and hardware interrupts to optimize interface flow and system responsiveness.
 
@@ -138,7 +138,7 @@ Instead of hardcoding logic for each sensor and each variable, this array allows
 > 3. Dynamic display
 > 4. External interface expansion (e.g., MQTT-driven updates)
 
-## Example: TEMP
+### Example: TEMP
 
 ```c
 // === Structural Comp. =============================================----------
