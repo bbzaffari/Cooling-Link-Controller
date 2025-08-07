@@ -6,7 +6,7 @@
 **Platform:** ESP32 (Heltec LoRa version) \
 **Environment:** ESP-IDF (ESP32 development framework) \
 
-####***Project :*** [Final Project Thesis(TCC – Trabalho de Conclusão de Curso, in Brazil)](https://github.com/bbzaffari/TCC-Final-Project-Thesis)
+#### ***Project :*** [Final Project Thesis(TCC – Trabalho de Conclusão de Curso, in Brazil)](https://github.com/bbzaffari/TCC-Final-Project-Thesis)
 
 ---
 
