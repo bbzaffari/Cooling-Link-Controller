@@ -36,10 +36,10 @@ This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development en
   * MQTT over Wi-Fi: Remote telemetry to brokers for supervision and control.
 
 * **Concurrency and flow control**
-  FreeRTOS tasks, semaphores, and interrupts ensure robust, responsive operations even under concurrent events (e.g., button presses, sensor updates, communication).
+  * FreeRTOS tasks, semaphores, and interrupts ensure robust, responsive operations even under concurrent events (e.g., button presses, sensor updates, communication).
 
 * **Custom utilities and wrappers**
-  Includes custom-made utility libraries (e.g., `Utils`) for logging, I2C handling, and structured hardware abstraction.
+  * Includes custom-made utility libraries (e.g., `Utils`) for logging, I2C handling, and structured hardware abstraction.
 
 ---
 
