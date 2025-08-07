@@ -1,0 +1,12 @@
+[submodule "components/htu31"]
+	path = components/htu31
+	url = https://github.com/bbzaffari/HTU-31D-ESP-IDF-C
+[submodule "components/lora"]
+	path = components/lora
+	url = https://github.com/bbzaffari/lora-phy
+[submodule "components/ssd1306"]
+	path = components/ssd1306
+	url = https://github.com/bbzaffari/esp-idf-ssd1306-Minimal-Version
+[submodule "components/lora_proto"]
+	path = components/lora_proto
+	url = https://github.com/bbzaffari/LoRa-Protocol-ESP-IDF
