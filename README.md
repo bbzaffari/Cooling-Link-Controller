@@ -1,6 +1,5 @@
 # Cooling-Link Controller
-
-**Status:** [![status: stable | refactoring in progress](https://img.shields.io/badge/status-stable%20%7C%20refactoring%20in%20progress-green.svg)](https://github.com/bbzaffari/Cooling-Link-Controller)
+ [![](https://img.shields.io/badge/status-stable%20%7C%20refactoring%20in%20progress-green.svg)](https://github.com/bbzaffari/Cooling-Link-Controller)
 
 **Project:** Cooling-Link Controller \
 **Platform:** ESP32 (Heltec LoRa version) \
