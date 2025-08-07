@@ -3,7 +3,7 @@
 
 **Project:** Cooling-Link Controller \
 **Platform:** ESP32 (Heltec LoRa version) \
-**Environment:** ESP-IDF (ESP32 development framework) \
+**Environment:** ESP-IDF (ESP32 development framework) 
 
 #### 🔗***Project: *** [🔗Final Project Thesis - Cooling Link EcoSystem🔗](https://github.com/bbzaffari/TCC-Final-Project-Thesis)
 
