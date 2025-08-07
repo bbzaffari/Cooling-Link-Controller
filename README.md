@@ -184,7 +184,7 @@ Below is an overview of the key folders and components in this project:
 ## Clone
 All the modules listed above are required for proper system operation, as they implement core sensor drivers, communication protocols, and peripheral interfaces. To clone the complete functional project with all its dependencies, including submodules, use the following command:
 ''' bash
-git clone --recursive https://github.com/bbzaffari/TCC-Final-Project-Thesis
+git clone --recursive https://github.com/bbzaffari/Cooling-Link-Controller
 ''''
 This will ensure that all necessary components are pulled together for seamless compilation and deployment using ESP-IDF.
 
