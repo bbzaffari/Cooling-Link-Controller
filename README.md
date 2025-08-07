@@ -190,7 +190,8 @@ Below is an overview of the key folders and components in this project:
 
 ---
 RUN \
-All the modules listed above are required for proper system operation, as they implement core sensor drivers, communication protocols, and peripheral interfaces. Clone project with all its dependencies, including submodules, [**inside ESP-IDF**]() useing follow command:
+All the modules listed above are required for proper system operation, as they implement core sensor drivers, communication protocols, and peripheral interfaces.
+Clone the project with all its dependencies, including submodules, [**inside the ESP-IDF**]()  environment using the following command:
 ```bash
 git clone --recursive https://github.com/bbzaffari/Cooling-Link-Controller
 ```
