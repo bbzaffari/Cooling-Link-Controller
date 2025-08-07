@@ -45,7 +45,7 @@ Receives internal (temperature, humidity, and CO2), through a `LoRa–Proto`, an
 
 ## Core Control Structures
 
-This module defines the **core data structures** for configuring and managing sensor parameters (like TEMP, HUM, CO2) in a clean and scalable way.
+This module defines the **core control structures** for configuring and managing settings for each sensor (like TEMP, HUM, CO2) in a clean and scalable way.
 - ***`sConfigActivation`***
 - ***`sConfigElement`***
 
