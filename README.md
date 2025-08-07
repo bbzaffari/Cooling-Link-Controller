@@ -169,22 +169,22 @@ This tells the system:
 ## Repository Structure
 Below is an overview of the key folders and components in this project:
 ``` c
->Cooling-Link-Controller/ \
->├── components/ \
->├─── [`htu31`](https://github.com/bbzaffari/HTU-31D-ESP-IDF-C)/          // HTU31D sensor driver (fully implemented for ESP-IDF) \
->├─── [`lora`](https://github.com/bbzaffari/lora-phy)/           // Base LoRa PHY communication layer (adapted) \
->├─── [`lora_proto`](https://github.com/bbzaffari/LoRa-Protocol-ESP-IDF)/     // Custom protocol over LoRa PHY (developed for this project) \
->├─── [`ssd1306`](https://github.com/bbzaffari/esp-idf-ssd1306-Minimal-Version)/        // SSD1306 OLED driver (adapted from nopnop2002) \
->  \
->├── main/ \
->├─── main.c         // Entry point: system control loop, tasks and config \
->├─── Utils.c/.h      // Utility functions (Wrappers, common tools) \
->├─── CMakeLists.txt \
->  \
->├── .gitmodules         // Git submodules configuration \
->├── README.md \
->├── sdkconfig           // ESP-IDF config file \
->└── CMakeLists.txt      // Project build definition \
+Cooling-Link-Controller/ 
+├── components/ 
+├─── [`htu31`](https://github.com/bbzaffari/HTU-31D-ESP-IDF-C)/          // HTU31D sensor driver (fully implemented for ESP-IDF) 
+├─── [`lora`](https://github.com/bbzaffari/lora-phy)/           // Base LoRa PHY communication layer (adapted) 
+├─── [`lora_proto`](https://github.com/bbzaffari/LoRa-Protocol-ESP-IDF)/     // Custom protocol over LoRa PHY (developed for this project) 
+├─── [`ssd1306`](https://github.com/bbzaffari/esp-idf-ssd1306-Minimal-Version)/        // SSD1306 OLED driver (adapted from nopnop2002) 
+
+├── main/ 
+├─── main.c         // Entry point: system control loop, tasks and config 
+├─── Utils.c/.h      // Utility functions (Wrappers, common tools) 
+├─── CMakeLists.txt 
+  
+├── .gitmodules         // Git submodules configuration 
+├── README.md 
+├── sdkconfig           // ESP-IDF config file 
+└── CMakeLists.txt      // Project build definition 
 ```
 ## Clone
 All the modules listed above are required for proper system operation, as they implement core sensor drivers, communication protocols, and peripheral interfaces. To clone the complete functional project with all its dependencies, including submodules, use the following command:
