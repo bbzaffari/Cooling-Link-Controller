@@ -173,16 +173,16 @@ Below is an overview of the key folders and components in this project:
 - `Cooling-Link-Controller/`
   - `components/`
     - [`htu31`](https://github.com/bbzaffari/HTU-31D-ESP-IDF-C) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // HTU31D sensor driver (fully implemented for ESP-IDF)
-    - [`lora`](https://github.com/bbzaffari/lora-phy) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Base LoRa PHY communication layer (adapted)
-    - [`lora_proto`](https://github.com/bbzaffari/LoRa-Protocol-ESP-IDF) &nbsp;&nbsp;&nbsp; // Custom protocol over LoRa PHY (developed for this project)
+    - [`lora`](https://github.com/bbzaffari/lora-phy) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Base LoRa PHY communication layer (adapted)
+    - [`lora_proto`](https://github.com/bbzaffari/LoRa-Protocol-ESP-IDF) &nbsp;&nbsp; // Custom protocol over LoRa PHY (developed for this project)
     - [`ssd1306`](https://github.com/bbzaffari/esp-idf-ssd1306-Minimal-Version) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// SSD1306 OLED driver (adapted from nopnop2002)
   - `main/`
-    - `main.c` &nbsp;&nbsp;&nbsp;&nbsp;      // Entry point: system control loop, tasks and config
+    - `main.c` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       // Entry point: system control loop, tasks and config
     - `Utils.c/.h` &nbsp;&nbsp;&nbsp;&nbsp; // Utility functions (Wrappers, common tools)
     - `CMakeLists.txt`
   - `.gitmodules` &nbsp;&nbsp;&nbsp;&nbsp; // Git submodules configuration  
   - `README.md`  
-  - `sdkconfig` &nbsp;&nbsp;&nbsp;&nbsp; // ESP-IDF config file  
+  - `sdkconfig` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // ESP-IDF config file  
   - `CMakeLists.txt` &nbsp;&nbsp;&nbsp;&nbsp; // Project build definition
 
 ## Clone
