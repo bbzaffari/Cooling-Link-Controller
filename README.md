@@ -185,7 +185,7 @@ Below is an overview of the key folders and components in this project:
     - `CMakeLists.txt`
   - `.gitmodules` &nbsp;&nbsp;&nbsp;&nbsp;**->** *Git submodules configuration*  
   - `README.md`  
-  - `sdkconfig` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**->** *ESP-IDF config fil  
+  - `sdkconfig` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**->** *ESP-IDF config*  
   - `CMakeLists.txt`**->** *Project build definition*
 
 ---
