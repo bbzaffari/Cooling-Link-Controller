@@ -189,7 +189,7 @@ Below is an overview of the key folders and components in this project:
   - `CMakeLists.txt`**->** *Project build definition*
 
 ---
-Run \
+RUN \
 All the modules listed above are required for proper system operation, as they implement core sensor drivers, communication protocols, and peripheral interfaces. To clone the complete functional project with all its dependencies, including submodules, use the following command:
 ```bash
 git clone --recursive https://github.com/bbzaffari/Cooling-Link-Controller
