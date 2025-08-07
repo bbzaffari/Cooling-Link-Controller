@@ -168,7 +168,7 @@ This tells the system:
 
 ## Repository Structure
 Below is an overview of the key folders and components in this project:
-
+``` c
 >Cooling-Link-Controller/ \
 >├── components/ \
 >├─── [`htu31`](https://github.com/bbzaffari/HTU-31D-ESP-IDF-C)/          // HTU31D sensor driver (fully implemented for ESP-IDF) \
@@ -185,7 +185,7 @@ Below is an overview of the key folders and components in this project:
 >├── README.md \
 >├── sdkconfig           // ESP-IDF config file \
 >└── CMakeLists.txt      // Project build definition \
-
+```
 ## Clone
 All the modules listed above are required for proper system operation, as they implement core sensor drivers, communication protocols, and peripheral interfaces. To clone the complete functional project with all its dependencies, including submodules, use the following command:
 ```bash
