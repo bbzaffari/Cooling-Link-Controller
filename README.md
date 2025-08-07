@@ -15,7 +15,7 @@ Cooling-Link Controller is the core embedded system designed for my final engine
 
 This system leverages the ESP32 Heltec LoRa board and the ESP-IDF development environment. It was built to explore fine-grained task and thread management using FreeRTOS, with careful use of semaphores, mutexes, and hardware interrupts to optimize interface flow and system responsiveness.
 
-_
+​ 
 ---
 
 
